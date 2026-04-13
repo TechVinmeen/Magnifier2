@@ -154,6 +154,7 @@ void stopCursorMonitor() {
 	}
 }
 void CALLBACK TimerProc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime) {
+	return;
 	if (!gpDlg) return;
 	static HCURSOR lastCursor = nullptr;
 

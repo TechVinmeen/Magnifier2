@@ -322,7 +322,8 @@ void MoveWindow(CPoint newPosition)
 		CRect dlgRect;
 		gpDlg->GetWindowRect(dlgRect);
 		//gpDlg->MoveWindow(newPosition.x - (dlgRect.Width() / 2) , newPosition.y + (dlgRect.Height() / 2), dlgRect.Width(), dlgRect.Height());
-		gpDlg->SetWindowPos( NULL, newPosition.x - (dlgRect.Width() / 2), newPosition.y - (dlgRect.Height() / 2), 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_NOACTIVATE);
+		//gpDlg->SetWindowPos(NULL, newPosition.x - (dlgRect.Width() / 2), newPosition.y - (dlgRect.Height() / 2), 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_NOACTIVATE);
+		gpDlg->SetWindowPos(NULL, newPosition.x - dlgRect.Width() - 10 , newPosition.y - dlgRect.Height() -10, 0, 0, SWP_NOSIZE | SWP_NOZORDER | SWP_NOACTIVATE);
 		//SetViewTo(mPreviewCtrl.mpView, pDb, m_viewMatrix);
 	}
 	return;
